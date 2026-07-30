@@ -2,11 +2,11 @@ import { createContext } from 'react'
 
 export type Theme = 'light' | 'dark'
 
-export interface ThemeContextType {
+interface ThemeContextValue {
   theme: Theme
   toggleTheme: () => void
 }
 
-export const ThemeContext = createContext<ThemeContextType | undefined>(
+export const ThemeContext = createContext<ThemeContextValue | undefined>(
   undefined,
 )

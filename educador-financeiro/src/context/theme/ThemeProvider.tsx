@@ -1,20 +1,29 @@
-import { useEffect, useState, type ReactNode } from 'react'
-import { ThemeContext, type Theme } from './ThemeContext'
+import { type PropsWithChildren, useEffect, useState } from 'react'
 
-export function ThemeProvider({ children }: { children: ReactNode }) {
+import { type Theme, ThemeContext } from './ThemeContext'
+
+export function ThemeProvider({ children }: PropsWithChildren) {
   const [theme, setTheme] = useState<Theme>(() => {
-    const savedTheme = localStorage.getItem('theme') as Theme
-    return savedTheme || 'light'
+    const localStorageTheme = localStorage.getItem('theme') as Theme | null
+
+    if (localStorageTheme) {
+      return localStorageTheme
+    }
+
+    const systemPrefersDark = window.matchMedia(
+      '(prefers-color-scheme: dark)',
+    ).matches
+
+    return systemPrefersDark ? 'dark' : 'light'
   })
 
   useEffect(() => {
-    localStorage.setItem('theme', theme)
-    // Atualiza o atributo data-theme na tag <html>
     document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('theme', theme)
   }, [theme])
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'))
+    setTheme((currentTheme) => (currentTheme === 'light' ? 'dark' : 'light'))
   }
 
   return (
