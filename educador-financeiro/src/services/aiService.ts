@@ -53,3 +53,9 @@ export const getInsight = async (prompt: string) => {
   const json = response.candidates[0].content.parts[0].text
   return JSON.parse(json) as InsightData
 }
+
+export const askGeminiChat = async (contextPrompt: string, question: string) => {
+  const chatPrompt = `Contexto da simulação financeira do usuário:\n${contextPrompt}\n\nCom base nesse contexto, responda à seguinte dúvida do usuário de forma clara, objetiva e consultiva:\n${question}`
+  const response = await callGeminiAPI(chatPrompt)
+  return response.candidates[0].content.parts[0].text
+}
