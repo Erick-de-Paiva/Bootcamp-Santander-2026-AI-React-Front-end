@@ -79,13 +79,13 @@ Durante o desenvolvimento deste desafio, foi possível praticar e consolidar con
 
 <p align="center">
   <br>
-  <strong>Diagnóstico e Indicador de Viabilidade</strong><br>
+  <strong>Diagnóstico e Chat Interativo</strong><br>
   <img width="750" alt="Resultado e Diagnóstico" src="https://github.com/user-attachments/assets/50be3c26-0a41-40b2-9ab7-3dee45ff7692" />
 </p>
 
 <p align="center">
   <br>
-  <strong>Chat Interativo e Histórico (localStorage)</strong><br>
+  <strong>Histórico (localStorage)</strong><br>
   <img width="750" alt="Histórico e Chat" src="https://github.com/user-attachments/assets/1b0d5c77-e10f-4654-adf5-067eebed307d" />
 </p>
 
