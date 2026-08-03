@@ -64,3 +64,7 @@ Durante o desenvolvimento deste desafio, foi possível praticar e consolidar con
 * Gerenciamento de estados complexos e persistência de dados no navegador (localStorage).
 * Tratamento robusto de erros e estados de carregamento.
 * Criação de interfaces responsivas e componentizadas com Tailwind CSS.
+
+<img width="1920" height="1080" alt="resultado" src="https://github.com/user-attachments/assets/50be3c26-0a41-40b2-9ab7-3dee45ff7692" />
+<img width="1920" height="1080" alt="Histórico" src="https://github.com/user-attachments/assets/1b0d5c77-e10f-4654-adf5-067eebed307d" />
+<img width="1920" height="1080" alt="inicial" src="https://github.com/user-attachments/assets/cf617f6a-40e6-437a-9b99-130d7dedd29f" />
